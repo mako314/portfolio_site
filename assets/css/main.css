@@ -1,0 +1,114 @@
+.container {
+    display:flex;
+    flex-direction: column;
+    position: relative;
+    padding: 2rem; /* p-8 */
+    max-width: 1280px; /* max-w-screen-xl */
+}
+
+.column{
+  flex: 1;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* This ensures .profile-info takes up all available vertical space */
+  }
+
+
+/* .about-me-header,
+.skills-header,
+.project-header,
+.experience-header{
+
+} */
+
+.about-me,
+.skills,
+.project,
+.experience {
+  display: flex;
+  flex-direction: row; /* Set back to row to have header and content side by side */
+  margin-bottom: 30px;
+  align-items: stretch; /* Stretch child elements to the same height */
+  align-items: flex-start /* Aligned items appropriately, prior skills would not be */
+}
+
+.header {
+/* Set a fixed width or use flex-basis to allocate space for the header */
+flex-basis: 200px; /* Adjust as needed */
+flex-shrink: 0; /* Prevent the header from shrinking */
+display: flex;
+align-items: center; /* Center the header title vertically */
+padding: 16px; /* Add some padding */
+}
+
+.content-container {
+flex: 1; /* Makes content-container take up the remaining space */
+display: flex;
+flex-direction: column;
+justify-content: flex-start; /* Aligns content to the top */
+padding: 16px; /* Adds padding inside the container */
+}
+
+/* .content{
+    margin: 0;
+    margin-left: 16px;
+    text-align: justify;
+    text-justify: inter-word;
+} */
+
+.content p {
+    text-align: left; /* Adjust text alignment as needed */
+}
+
+.name-title h1,
+.name-title h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Image stuff  */
+.image-name-container {
+    display: flex; /* Aligns child elements (img and .name-title) side by side */
+    align-items: center; /* Centers them vertically */
+}
+.profile-image {
+    /* Set max-width as necessary to control the image size */
+    border-radius: 50%;
+    transition: all 0.15s ease-in-out;
+    margin-bottom: 20px;
+}
+
+
+.profile-image:hover {
+    /* Scales the image to 105% when hovering */
+    transform: scale(1.05);
+}
+
+/* Add some spacing between the image and the text */
+.name-title {
+    margin-left: 20px;
+}
+
+/* Image stuff  */
+
+  /* Media query for extra small screens */
+@media (min-width: 640px) { /* Assuming 640px*/
+    .container {
+      padding: 6rem; /* xs:p-24 */
+    }
+}
+
+/* Add media queries to stack the layout on smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+}
+
+.column {
+    flex: 1;
+    width: 100%;
+  }
+}
