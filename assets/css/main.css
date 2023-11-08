@@ -32,7 +32,7 @@
   flex-direction: row; /* Set back to row to have header and content side by side */
   margin-bottom: 30px;
   align-items: stretch; /* Stretch child elements to the same height */
-  align-items: flex-start Aligned items appropriately, prior skills would not be 
+  align-items: flex-start /* Aligned items appropriately, prior skills would not be */
 }
 
 .header {
